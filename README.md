@@ -1,5 +1,4 @@
 # Hyprland config ( SimpleGruvbox )
-This is my own config for a lightweight and minimal workflow
 
 ## Some apps i use in this config:
 + terminal: foot
@@ -17,4 +16,8 @@ This is my own config for a lightweight and minimal workflow
 + and more ...
 
 > sorry for my bad english :)
-![screenshot]()
+![screenshot](/SimpleGruvbox/screenshots/20250508_17h20m38s_grim.png)
+![screenshot](/SimpleGruvbox/screenshots/20250508_17h21m01s_grim.png)
+![screenshot](/SimpleGruvbox/screenshots/20250508_17h21m42s_grim.png)
+![screenshot](/SimpleGruvbox/screenshots/20250508_17h21m47s_grim.png)
+![screenshot](/SimpleGruvbox/screenshots/–%20Hyprland%20%26%20Arch%20–.jpg)
