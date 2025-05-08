@@ -1,0 +1,132 @@
+{
+    "layer": "top",
+    "spacing": 0,
+    "height": 0,
+
+    "margin-top": 5,
+    "margin-right": 5,
+    "margin-bottom": 0,
+    "margin-left": 5,
+
+    "modules-left": [
+	"custom/icon",
+        "hyprland/workspaces",
+	"cpu",
+	"memory",
+	"temperature"
+    ],
+
+    "modules-center": [
+        "clock"
+    ],
+
+    "modules-right": [
+        "tray",
+	"power-profiles-daemon",
+        "battery",
+        "network",
+	"backlight",
+        "pulseaudio"
+    ],
+
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "tooltip": false,
+        "persistent-workspaces": {
+	        "*": [ 1,2,3,4,5,6,7,8,9 ]
+        }
+    },
+
+    "tray": {
+        "spacing": 10,
+        "tooltip": false
+    },
+
+    "clock": {
+        "format": "{:%I:%M %p - %a, %d %b %Y}",
+        "tooltip": false
+    },
+    "temperature": {
+        "hwmon-path": "/sys/devices/platform/dell_smm_hwmon/hwmon/hwmon3/temp1_input",
+        "critical-threshold": 80,
+        "format": "{icon} {temperatureC}°C",
+        "format-icons": ["", "", "", "", ""],
+	"interval": 5
+    },
+
+    "cpu": {
+        "format": "{icon}  {usage}%",
+	"format-icons": [""],
+        "interval": 2,
+        "states": {
+            "critical": 90
+        }
+    },
+
+    "memory": {
+        "format": "{icon}  {percentage}%",
+        "format-icons": [""],
+	"interval": 2,
+        "states": {
+            "critical": 80
+        }
+    },
+
+    "battery": {
+        "format": "{icon} {capacity}%",
+        "format-charging": " {capacity}%" ,
+        "format-plugged": " {capacity}%",
+        "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+	"interval": 5,
+        "states": {
+            "warning": 20,
+            "critical": 10
+        },
+        "tooltip": false
+    },
+
+    "network": {
+        "format-wifi" : "{icon}  {bandwidthDownBits} | {bandwidthUpBits}",
+	"format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
+        "format-ethernet": "  {bandwidthDownBits}",
+        "format-disconnected" : "󰤮 ",
+        "interval": 5,
+        "tooltip": false
+    },
+
+    "backlight": {
+        "format": "{icon}  {percent}%",
+	"format-icons": [""]
+    },
+    
+    "power-profiles-daemon": {
+      "format": "{icon} ",
+      "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+      "tooltip": true,
+      "format-icons": {
+        "default": " ",
+        "performance": "",
+        "balanced": "",
+        "power-saver": ""
+      }
+    },
+
+    "pulseaudio": {
+        "scroll-step": 5,
+        "max-volume": 150,
+        "format": "{icon} {volume}%",
+	"format-mute": "󰖁",
+	"format-icons": ["󰕿", "󰖀", "󰕾"],
+        "format-bluetooth": "ble {volume}%",
+        "nospacing": 1,
+        //"on-click": "pavucontrol",
+        "tooltip": false
+    },
+
+    "custom/icon": {
+	"format": " 󰣇 ",
+	"tooltip": false,
+	"on-click": "wlogout --protocol layer-shell"
+    }
+}
